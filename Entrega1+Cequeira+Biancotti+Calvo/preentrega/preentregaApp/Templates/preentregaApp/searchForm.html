@@ -1,0 +1,13 @@
+{% extends 'preentregaApp/parent.html' %}
+{% load static %}
+{% block topPage %}
+<a class="navbar-brand" href="{% url 'index' %}">CODERHOUSE</a>
+{% endblock %}
+{% block changingContent %}
+{{c_title}}
+{% if courses %}
+    {% for i in courses %}
+        <li>{{i.c_title}} {{i.c_lenght}}</li>
+    {% endfor %}
+{% endif %}
+{% endblock %}

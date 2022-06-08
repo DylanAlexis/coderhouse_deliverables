@@ -24,4 +24,6 @@ urlpatterns = [
     path('professor/', professor, name='professor'),
     path('alumn/', alumn, name='alumn'),
     path('updateForm/', updateForm, name='updateForm'),
+    path('readForm', readForm, name='readForm'),
+    path('searchForm', searchForm, name='searchForm'),
 ]

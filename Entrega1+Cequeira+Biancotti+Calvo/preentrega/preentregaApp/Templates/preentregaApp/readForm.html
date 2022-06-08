@@ -1,0 +1,11 @@
+{% extends 'preentregaApp/parent.html' %}
+{% load static %}
+{% block topPage %}
+<a class="navbar-brand" href="{% url 'index' %}">CODERHOUSE</a>
+{% endblock %}
+{% block changingContent %}
+<form action="{% url 'searchForm' %}" method="GET">
+    <input type="text" name="c_title" id="c_title">
+    <input type="submit" value="Buscar">
+</form>
+{% endblock %}

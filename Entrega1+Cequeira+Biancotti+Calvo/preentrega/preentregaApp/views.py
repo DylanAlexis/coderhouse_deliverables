@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 from .models import *
 from .forms import *
@@ -31,3 +32,15 @@ def updateForm(request):
     else:
         form = UpdateForm()
     return render(request, 'updateForm.html', {'form': form})
+
+def readForm(request):
+    return render(request, 'readForm.html')
+
+def searchForm(request):
+    if request.GET['c_title']:
+        c_title = request.GET['c_title']
+        courses = Course.objects.filter(c_title=c_title)
+        return render(request, 'searchForm.html', {'courses': courses, 'c_title': c_title})
+    else:
+        answer = f"No se ha encontrado ningún curso con el nombre {request.GET['c_title']}"
+    return HttpResponse(answer)

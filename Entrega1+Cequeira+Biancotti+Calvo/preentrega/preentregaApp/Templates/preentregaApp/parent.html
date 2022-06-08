@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Creative - Start Bootstrap Theme</title>
+        <title>Aprendizaje eLearning</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap Icons-->
@@ -29,9 +29,9 @@
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="{% url 'course' %}">Courses</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'professor' %}">Professors</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'alumn' %}">Alumns</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'course' %}">Cursos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'professor' %}">Profesores</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'alumn' %}">Alumnos</a></li>
                     </ul>
                 </div>
             </div>
@@ -41,12 +41,17 @@
             <div class="container px-4 px-lg-5 h-100">
                 <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
                     <div class="col-lg-8 align-self-end">
+                        {% block header %}
                         <h2 class="text-white font-weight-bold">Unite a la comunidad de aprendizaje online en vivo más grande de Latinoamérica</h2>
+                        {% endblock %}
                         <hr class="divider" />
                     </div>
                     <div class="col-lg-8 align-self-baseline">
-                        <p class="text-white-75 mb-5">Start Bootstrap can help you build better websites using the Bootstrap framework! Just download a theme and start customizing, no strings attached!</p>
-                        <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
+                        {% block header2 %}
+                        <p class="text-white-75 mb-5">Clases online en vivo dictadas por expertos de la industria, enfoque 100% práctico, mentorías personalizadas y acceso a una comunidad de +100.000 estudiantes.</p>
+                        {% endblock %}
+                        <a class="btn btn-primary btn-xl" href="{% url 'updateForm' %}">Registrarse</a>
+                        <a class="btn btn-primary btn-xl" href="{% url 'readForm' %}">Buscar curso</a>
                     </div>
                 </div>
             </div>
@@ -56,7 +61,7 @@
         {% endblock %}
         <!-- Footer-->
         <footer class="bg-light py-5">
-            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2022 - Company Name</div></div>
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2022 - Coderhouse</div></div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

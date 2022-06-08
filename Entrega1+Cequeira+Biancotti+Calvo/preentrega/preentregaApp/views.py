@@ -39,7 +39,7 @@ def readForm(request):
 def searchForm(request):
     if request.GET['c_title']:
         c_title = request.GET['c_title']
-        courses = Course.objects.filter(c_title=c_title)
+        courses = Course.objects.filter(c_title__icontains=c_title)
         return render(request, 'searchForm.html', {'courses': courses, 'c_title': c_title})
     else:
         answer = f"No se ha encontrado ningún curso con el nombre {request.GET['c_title']}"

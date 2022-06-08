@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from preentregaApp.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', index, name='index'),
+    path('course/', course, name='course'),
+    path('professor/', professor, name='professor'),
+    path('alumn/', alumn, name='alumn'),
+    path('updateForm/', updateForm, name='updateForm'),
 ]

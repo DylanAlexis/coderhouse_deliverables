@@ -55,7 +55,7 @@ ROOT_URLCONF = 'preentrega.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [r'C:\Users\Usuario\Desktop\VSC\coderhouse_deliverables\Entrega1+Cequeira+Biancotti+Calvo\preentrega\preentregaApp\Templates\preentregaApp'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
